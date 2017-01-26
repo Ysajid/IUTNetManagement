@@ -25,4 +25,4 @@ def getRemainingTime(userid, password) :
     return usage
 
 
-getRemainingTime("yeminsajid", "abdullah")
+getRemainingTime("yeminsajid", "______")
