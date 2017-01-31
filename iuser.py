@@ -3,6 +3,7 @@ import re
 from bs4 import BeautifulSoup
 import urllib2 
 import cookielib
+import sys
 
 def connect() : {
 
@@ -22,7 +23,11 @@ def getRemainingTime(userid, password) :
     response  = br.response().read().replace('\n',' ')
     usage = re.findall(r'<td>([0-9]+) Minute+', response)
 
-    return usage
+    print usage
 
 
-getRemainingTime("yeminsajid", "______")
+(sys.argv).reverse()
+sys.argv.pop()
+
+if(len(sys.argv) == 2) :
+    getRemainingTime(sys.argv.pop(), sys.argv.pop())
